@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+    <title>Cart</title>
+    <!-- <link rel="icon" href="images/title logo.jpg" type="image/icon type">
+    <link rel="stylesheet" href="css/style.css"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/services.css">
+
+
+<style>
+    /* cart-page starts here */
+#cart {
+    overflow-x: auto;
+}
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img {
+    width: 161px;
+}
+
+#cart table td {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table thead {
+    border: 1px solid #6b6963;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart table tbody td {
+    font-size: 13px;
+}
+
+#cart table td .normal {
+    background-color: rgb(255, 72, 72);
+    border: 1px solid black;
+    transition: 0.3s ease;
+}
+
+#cart table td .normal:hover {
+    background-color: rgb(6, 96, 126);
+    color: black;
+}
+
+
+/* bill-details starts here */
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+
+#coupon input {
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button {
+    padding: 12px 20px;
+    transition: 0.3s ease;
+}
+
+#coupon button:hover,
+#subtotal button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #6b6963;
+    padding: 30px;
+}
+
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td {
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+.section-p1 {
+    padding: 119px 80px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
+
+        <nav class="navbar">
+            <a class="active" href="./services.html">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+
+
+
+
+    </header>
+
+    <!-- cart-details starts here -->
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>IMAGE</td>
+                    <td>PRODUCT</td>
+                    <td>PRICE</td>
+                    <td>QUATINTY</td>
+                    <td>REMOVE</td>
+                </tr>
+            </thead>
+        </table>
+        
+        <div id="card-cart-wrapper">
+        </div>
+    </section>
+
+    <!-- bill-details starts here -->
+    <section id="cart-add" class="section-p1">
+
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Sub-total</td>
+                    <td>$<span id="total-price"></span></td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Final Price</strong></td>
+                    <td><strong>$<span id="final-price"></span></strong></td>
+                </tr>
+            </table>
+          <a href="./checkout.html"  ><button class="normal">Proceed To CheckOut</button></a>
+        </div>
+    </div>
+    </section>
+       <!-- footer section starts  -->
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>locations</h3>
+                    <a href="#">india</a>
+                    <a href="#">japan</a>
+                    <a href="#">russia</a>
+                    <a href="#">USA</a>
+                    <a href="#">france</a>
+                </div>
+
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#">home</a>
+                    <a href="#">dishes</a>
+                    <a href="#">about</a>
+                    <a href="#">menu</a>
+                    <a href="#">reivew</a>
+                    <a href="#">order</a>
+                </div>
+
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#">+123-456-7890</a>
+                    <a href="#">+111-222-3333</a>
+                    <a href="#">shaikhanas@gmail.com</a>
+                    <a href="#">anasbhai@gmail.com</a>
+                    <a href="#">mumbai, india - 400104</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">twitter</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkedin</a>
+                </div>
+
+            </div>
+
+            <div class="credit"> copyright @ 2021 by <span>mr. web designer</span> </div>
+
+        </section>
+
+
+      
+    <script src="./js/main-cart.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
